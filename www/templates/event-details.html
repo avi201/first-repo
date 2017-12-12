@@ -1,0 +1,42 @@
+<ion-view class="cus-login-bg-color" cache-view="false">
+    <div class="bar bar-header cus-header">
+        <button class="button button-icon ion-arrow-left-c" ng-click="goback()"></button>
+        <h1 class="title home-title">Event Details</h1>
+    </div>
+<ion-content class="cus-login-bg-color has-header"> 
+<ion-slide-box does-continue="true" slide-interval="5000"  on-slide-changed="slideHasChanged($index)" >
+    <ion-slide  ng-repeat="img in event.images" >  
+	    <div class="cus-slide-img"><img ng-src="{{img.picture.url}}"></div>
+    </ion-slide>
+  <!--   <ion-slide>
+        <div class="cus-slide-img"><img src="img/slide-img.png"></div>
+    </ion-slide>
+    <ion-slide>
+        <div class="cus-slide-img"><img src="img/slide-img.png"></div>	
+    </ion-slide> --> 
+</ion-slide-box>
+
+	<div class="cus-amt-dtl">
+	    <a class="item" >
+            <div class="cus-product-row">
+			    <div class="cus-product-name">Event Name</div>
+				<div class="cus-colon-text">:</div>
+				<div class="cus-product-value">{{events.name}}</div>
+			</div>
+            <div class="cus-product-row">
+				<div class="cus-product-name">Date</div>
+				<div class="cus-colon-text">:</div> 
+				<div class="cus-product-value">{{events.date}}</div>
+			</div>
+			<div class="cus-product-row">
+				 <div class="cus-product-name">Address</div>
+				 <div class="cus-colon-text">:</div>
+				 <div class="cus-product-value">{{events.address}}</div>
+			</div>
+        </a>
+    </div>
+	
+<!--	 <div class="cus-event-dtl-btn cus-pad1"><button class="button button-block button-positive">Ticket URL- abc.com</button></div>-->
+	  <div class="cus-event-dtl-btn cus-pad2"><button class="button button-block button-positive" ui-sref="search-menu">Order Food</button></div>  
+</ion-content>
+</ion-view>

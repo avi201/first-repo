@@ -1,0 +1,79 @@
+<ion-view class="cus-login-bg-color">  
+    <div class="bar bar-header cus-header">
+		  <button class="button button-icon icon ion-arrow-left-c" ng-click="goback()"></button>
+		  <h1 class="title home-title">Sign Up</h1>
+    </div>
+<ion-content class="cus-login-bg-color has-header">
+    <form  name="myForm" novalidate>
+	<div class="cus-user-logoprofile">
+	    <img src="{{img}}" ng-click="start()" >
+    </div>
+	<div class="cus-tab-btnn">
+		<a class="cus-signUp-btn-padding cus-sign-UP-bg" ui-sref="signup">Sign Up</a>
+		<a class="cus-signIn-btn-padding" ui-sref="login">Sign In</a>
+	</div> 
+      
+	
+	<div class="list list-inset cus-signup-list" >
+        <label class="item item-input">
+       <input type="text"  placeholder="First Name" ng-trim="false" ng-model="signfrm.firstname" ng-blur="validateFirstName()" ng-change="reset()" required>   
+       </label>   
+           <div>
+            <span class="valid" ng-if="isFirstNameInvalid">Invalid First name </span>
+           </div>
+           			 
+        <label class="item item-input">
+       <input type="text"  placeholder="Last Name" ng-model="signfrm.lastname" ng-trim="false"  ng-blur="validateLastName()" ng-change="reset()" >
+				
+       </label>
+            <div>
+                 <span class="valid" ng-if="isLastNameInvalid">Invalid Last name </span>
+            </div>
+					
+	    <label class="item item-input">
+        <input type="number"  placeholder="Mobile Number" ng-model="signfrm.mnumber"  ng-blur="validateNumber()" ng-minlength="10" ng-maxlength="10" ng-change="reset()" required>			
+       </label>
+            <div> 
+                <span class="valid" ng-if="isNumberInvalid">Mobile number must be of 10 digits only</span>
+                </div>
+				
+	   <label class="item item-input">
+       <input type="email"  placeholder="Email" ng-model="signfrm.email" ng-trim="false" ng-blur="validateEmail()" ng-change="reset()" required>		 
+       </label><div>
+          <span class="valid" ng-if="isEmailInvalid">Invalid email-id</span>
+        </div>
+		 
+        <div ng-class="{ 'cls-pswrdMissmatch':signfrm.cpwd!=myForm.newpwd && signfrm.cpwd.length>0}">
+            
+        <label class="item item-input hh">
+			<input type="password" name="newpwd" ng-model="signfrm.newpwd" placeholder="Password" ng-minlength="8" ng-maxlength="16" required>	
+		</label><div>
+            <span style="color:red" ng-if="myForm.newpwd.$dirty && myForm.newpwd.$invalid">
+            <span ng-if="myForm.newpwd.$error.required">Password is required.</span>
+            <span ng-if="myForm.newpwd.$error.maxlength || myForm.newpwd.$error.minlength">Password  must be in between 8-16 characters</span>
+            </span></div>
+    
+
+        
+        <label class="item item-input">
+			<input type="password" name="cpwd" ng-model="signfrm.cpwd" placeholder="Confirm Password"  required>			
+        </label>
+            <div><span  style="color:red" ng-if="signfrm.cpwd!=signfrm.newpwd && signfrm.cpwd.length>0 ">Password mismatch..</span></div>
+		  </div>
+	</div>	
+           <div class="cus-mark-order00">
+                <div class="row text-center">
+                    <div class="col">
+                        <div class="cnt_div">
+                        <ion-checkbox ng-model="isChecked" required></ion-checkbox>
+                        <div class="pp00" ng-click="tc()">I agree Terms of use</div>
+                        </div>    
+                    </div>
+                    
+                </div>
+            </div>
+				
+    <div class="cus-signIn-btn"><button class="button button-block button-positive" ng-click="signup()" ng-disabled="myForm.$invalid || !isChecked">Sign Up</button></div>
+    </form>
+  </ion-content>
+</ion-view>

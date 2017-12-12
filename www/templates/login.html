@@ -1,0 +1,47 @@
+<ion-view class="cus-login-bg-color">
+    <ion-content class="cus-login-bg-color">
+			<div class="cus-logo-img"><img src="img/logo1.png" class="cus-logo"></div>          
+				<div class="cus-tab-btn">
+					<a class="cus-signUp-btn-padding" ui-sref="signup">Sign Up</a>
+					<a class="cus-signIn-btn-padding cus-sign-IN-bg" ui-sref="login">Sign In</a>
+				</div>  
+		  
+			<div class="list list-inset cus-login-list" >
+				<label class="item item-input">
+					<i class="icon ion-ios-email-outline"></i>
+					 <input type="text"  placeholder="Email or Mobile Number" ng-model="loginFrm.email" ng-trim="false" ng-blur="validateEmailNumber()" get-keypress ng-change="reset()" required>
+				</label>
+                  <div>   
+                    <span class="valid" ng-if="isEntryInvalid">Invalid email-id</span>
+                    <span class="valid" ng-if="invalidMobile">Mobile Number must be of 10 digits only.</span>  
+                    <span class="valid" ng-if="isEmailInvalid">invalid email-id.</span>     
+                  </div>
+                
+                
+				<label class="item item-input hh">
+					<i class="icon ion-ios-locked-outline"></i>
+					 <input type="password" placeholder="Password" ng-model="loginFrm.password"  ng-blur="validatePassword()" ng-change="reset()" ng-trim="false" required>  
+				</label>
+                 <div>   
+                    <span class="valid" ng-if="isPwdInvalid">Password must be in between 8-16 Characters</span>  
+          
+                </div>
+                
+			</div>
+        
+         <div class="cus-mark-order12">
+            <div class="row">
+               <div class="col">
+                   <ion-checkbox  ng-model="item.checked" ng-change="itemChange()">Remember me</ion-checkbox>
+               </div> 
+                
+                <div class="col">
+                    <div class="fg11" ui-sref="frgtpass">Forgot Password?</div>
+                </div>
+            </div>
+        </div>
+			
+			<div class="cus-signIn-btn"><button class="button button-block button-positive" ng-click="login()" ng-disabled=" flag">Sign In</button></div>   
+    </ion-content>
+</ion-view>
+

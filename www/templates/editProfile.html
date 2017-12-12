@@ -1,0 +1,53 @@
+<ion-view class="cus-login-bg-color">
+    <form name="myForm" novalidate>
+    <div class="bar bar-header cus-header">
+        <button class="button button-icon icon ion-arrow-left-c" ng-click="goback()"></button>
+		<h1 class="title home-title">Edit Profile</h1>
+         <button class="cus-save-btn-icon" ng-disabled="myForm.$invalid" ng-click="save()"><img src="img/save-icon.png" class="cus-save-iconn"></button>
+	</div>
+	
+<ion-content class="cus-login-bg-color has-header">
+    <div class="cus-user-logoprofile">
+		<img src="{{img}}" ng-click="start()">
+    </div>
+	
+	<div class="list list-inset cus-login-list cus-m1" >
+		
+        <label class="item item-input">
+           <input type="text" name="firstname" placeholder="First Name" ng-trim="false" ng-model="editfrm.firstname" ng-blur="validateFirstName()" ng-change="reset()" required>   
+       </label>   
+           <div>
+            <span class="valid" ng-if="isFirstNameInvalid">Invalid First name </span>
+           </div>
+           			 
+        <label class="item item-input">
+           <input type="text" name="lastname" placeholder="Last Name" ng-model="editfrm.lastname" ng-trim="false"  ng-blur="validateLastName()" ng-change="reset()"  required>
+				
+       </label>
+            <div>
+             <span class="valid" ng-if="isLastNameInvalid">Invalid Last name </span>
+            </div>
+            
+<!--
+        <label class="item item-input">
+           <input type="number" name="mnumber" placeholder="Mobile Number" ng-model="editfrm.mnumber"  ng-blur="validateNumber()" ng-minlength="10" ng-maxlength="10" ng-change="reset()" required>			
+        </label>
+            <div> 
+                <span class="valid" ng-if="isNumberInvalid">Mobile number must be of 10 digits only</span>
+            </div>
+        
+	  <label class="item item-input">
+          <input type="text"  placeholder="Email" ng-model="editfrm.email" ng-trim="false" ng-blur="validateEmail()" ng-change="reset()"  required>		 
+       </label>
+        <div>
+          <span class="valid" ng-show="isEmailInvalid">Invalid email-id</span>
+        </div>
+        
+        
+-->
+ 
+   
+    </div>
+</ion-content>
+    </form>
+</ion-view>

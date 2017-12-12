@@ -1,0 +1,37 @@
+<ion-view class="cus-login-bg-color">
+    <div class="bar bar-header cus-header">
+         <button class="button button-icon ion-arrow-left-c"  ng-click="goback()"></button>
+<!--        <button class="button button-icon ion-navicon"  menu-toggle="left"></button>      ui-sref="event-details"-->
+        <h1 class="title home-title">Vendor List</h1>
+<!--        <button class="button button-icon button-clear ion-android-add"></button>-->
+    </div>
+	
+<ion-content class="cus-login-bg-color has-header">  
+	<div class="list cus-search-listt">
+		<div class="item item-input-inset cus-search-bg-list">
+			<label class="item-input-wrapper">
+			  <i class="ion-ios-search-strong cus-sear-icon"></i>
+			  <input type="text" placeholder="Search by Product name" ng-model="vendor.name_of_business" class="cus-input-searchh">
+			</label>
+		</div>
+    </div>
+  
+    <div class="list cus-list-item-detail">
+		  <a class="item cus-item-t1 item-thumbnail-left"   ng-repeat="vendor in vendorList | filter:vendor.name_of_business " ng-click="vendors({{vendor}})">
+			  <img src="{{vendor.image.url}}">
+			  <div class="cus-product-row">
+				  <div class="cus-product-name">Vender Id</div> 
+				  <div class="cus-colon-text">:</div>
+				  <div class="cus-product-value">{{vendor.id}}</div>
+			  </div>
+
+              <div class="cus-product-row">
+			       <div class="cus-product-name">Vender Name</div> 
+				  <div class="cus-colon-text">:</div>
+				  <div class="cus-product-value">{{vendor.name_of_business}}</div>
+			  </div>
+		</a>  
+			
+    </div>
+    </ion-content>
+</ion-view>

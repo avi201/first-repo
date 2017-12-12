@@ -1,0 +1,27 @@
+<ion-view class="cus-login-bg-color">
+    <div class="bar bar-header cus-header">
+        <button class="button button-icon ion-navicon" menu-toggle="left"></button>
+        <h1 class="title home-title">Home</h1>
+            <div class="button cus-cls-btn-color" side="right">
+                <button class="button button-icon ion-android-notifications" ui-sref="notification"></button>
+                <button class="button button-icon ion-ios-search-strong" ui-sref="browse-event"></button>
+            </div>
+    </div>
+<ion-content class="cus-login-bg-color has-header" > 
+    <div class="list cus-list-body">
+		<a class="item" ng-repeat="event in eventList"  ng-click="eventData(event)">
+
+			<div class="cus-p-1-list">
+			    <img ng-src="{{event.images[0].picture.thumb.url}}">
+			</div>
+			<div class="cus-p-2-list">
+				<div>{{event.name}}</div>
+				<div>{{event.date}}</div>
+				<div>{{event.address}}</div>
+			</div>
+		</a>
+		
+
+	</div>
+    </ion-content>
+</ion-view>

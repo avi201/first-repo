@@ -1,0 +1,48 @@
+<ion-view class="cus-login-bg-color">
+    <div class="bar bar-header cus-header">
+        <button class="button button-icon icon ion-arrow-left-c" ui-sref="menu.home"></button>
+		<h1 class="title home-title">Change password</h1>
+	</div>
+	
+<ion-content class="cus-login-bg-color has-header">	
+    <form name="myForm">
+	<div class="list list-inset cus-login-list cus-m1 cus-p0">
+		<label class="item item-input">
+			<input type="password" name="old" ng-model="myfrm.oldP" placeholder="Old Password" required>	
+		</label><div>
+            <span style="color:red" ng-if="myForm.old.$dirty && myForm.old.$invalid">
+            <!-- <span ng-if="myForm.old.$error.required">Old password is required.</span> --></span>
+        
+        </div>
+      
+        <div ng-class="{ 'cls-pswrdMissmatch':myfrm.cpwd!=myForm.newpwd && myfrm.cpwd.length>0}">
+            
+        <label class="item item-input">
+			<input type="password" name="newpwd" ng-model="myfrm.newpwd" placeholder="New Password" ng-minlength="8" ng-maxlength="16" required>	
+		</label><div>
+            <span style="color:red" ng-if="myForm.newpwd.$dirty && myForm.newpwd.$invalid">
+            <!-- <span ng-if="myForm.newpwd.$error.required">New password is required.</span> -->
+            <span ng-if="myForm.newpwd.$error.maxlength || myForm.newpwd.$error.minlength">Password  must be in between 8-16 characters</span>
+            </span></div>
+    
+
+        
+        <label class="item item-input">
+			<input type="password" name="cpwd" ng-model="myfrm.cpwd" placeholder="Confirm Password"  required>			
+        </label>
+            <div><span class="valid" ng-if="myfrm.cpwd!=myfrm.newpwd && myfrm.cpwd.length>0 ">Password mismatch..</span></div>
+		  </div>
+		<div class="row cus-change-pwd-btn">
+			<div class="col pl0">
+				<button class="button button-block button-dark" ui-sref="menu.home">Cancel</button>
+			</div>
+			<div class="col pr0">
+				<button class="button button-block button-dark" ng-disabled="myForm.$invalid ||myfrm.cpwd!=myfrm.newpwd " ng-click="changePwd()">Save</button>
+			</div>
+		</div>
+    </div>
+    </form>
+</ion-content>
+  
+</ion-view>
+

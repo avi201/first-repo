@@ -1,0 +1,55 @@
+<ion-view class="cus-login-bg-color">
+    <div class="bar bar-header cus-header">
+        <button class="button button-icon ion-arrow-left-c" ui-sref="search-menu"></button>
+        <h1 class="title home-title">Vendor-Details</h1>
+        <div class="button cus-cls-btn-color" ui-sref="my-cart" side="right">
+        <div class="footer-vd1"><img src="img/cart.png"><div class="cart-no">{{items}}</div></div>
+    </div>
+    </div>
+	
+<ion-content class="cus-login-bg-color has-header">   
+	<div class="cus-vender-bg-img">
+		<img src="{{vendor.image.url}}">
+	</div>
+	
+    <div class="list cus-vendor-item-detail">
+		  <a class="item cus-vendor-t1 item-thumbnail-left" ng-repeat="product in productsList">
+			  <img src="{{product.image.url}}">
+			  <div class="cus-product-row">
+				  <div class="cus-product-name">Name of Business : {{vendor.name_of_business}}</div>
+			  </div>
+			  
+			  <div class="cus-product-row">
+				  <div class="cus-product-name">{{product.name}}</div> 
+			  </div>
+			  
+<!--
+			  <div class="cus-product-row">
+				  <div class="cus-product-name">Qty</div> 
+				  <div class="cus-colon-text">:</div>
+				  <div class="cus-product-value">1</div>
+			  </div>
+-->
+			  
+			  <div class="cus-product-row">
+				  <div class="cus-product-name">Cost</div> 
+				  <div class="cus-colon-text">:</div>
+				  <div class="cus-product-value">${{product.price}}</div>
+			  </div>
+			  
+			  <button class="button button-energized vendor-add-btn" ng-click="add({{product.id}})">Add</button>
+		  </a>
+		  
+    </div>
+	
+ </ion-content>
+	<!-- 
+	<ion-footer>
+		<div class="bar bar-footer">
+		    <div class="footer-vd2">Price:<span>$ 72</span></div>
+		   <div class="footer-vd1"><img src="img/cart.png" ui-sref="my-cart"><div class="cart-no">{{items}}</div></div>
+		    < <div class="footer-vd3"><button class="button button-energized" ng-click="order()">Place Order</button></div>
+ 		</div>
+	</ion-footer>-->
+
+	</ion-view>

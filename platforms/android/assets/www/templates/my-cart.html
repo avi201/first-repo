@@ -1,0 +1,49 @@
+<ion-view class="cus-login-bg-color">
+    <div class="bar bar-header cus-header">
+        <button class="button button-icon ion-arrow-left-c" ui-sref="vendor-details"></button>
+        <h1 class="title home-title">My Cart</h1>
+        <div class="button cus-cls-btn-color" ui-sref="my-cart" side="right">
+        <div class="footer-vd1"><img src="img/cart.png"><div class="cart-no">{{items}}</div></div>
+    </div>
+    </div>
+	
+<ion-content class="cus-login-bg-color has-header">   	
+    <div class="list cus-cart-item-detail">
+		  <a class="item cus-cart-t1 item-thumbnail-left"  ng-repeat="product in productList">
+			  <img src="{{product.image.url}}">
+			  <div class="cus-product-row">
+				  <div class="cus-product-name">Product</div> 
+				  <div class="cus-colon-text">:</div>
+				  <div class="cus-product-value">{{product.name}}</div>
+			  </div>
+			  
+			  <div class="cus-product-row">
+				  <div class="cus-product-name">Qty</div> 
+				  <div class="cus-colon-text">:</div>
+				  <div class="cus-product-value cus-text"><input type="number" ng-model="product.qty"></div>
+			  </div>
+			  
+			  <div class="cus-product-row">
+				  <div class="cus-product-name">Cost</div> 
+				  <div class="cus-colon-text">:</div>
+				  <div class="cus-product-value">${{product.price}}</div>
+			  </div>
+			  
+			  <div class="cus-delete-img"><img src="img/delete.png" ng-click="cancel({{product.id}})"></div>
+		  </a> 
+    </div>
+	
+</ion-content>
+	
+	<ion-footer>
+		<div class="bar bar-footer">
+<!-- 		    <div class="footer-vd1"><img src="img/cart.png">
+				<div class="cart-no">{{items}}</div>
+			</div> -->
+		    <div class="footer-vd2">Total Price:<span>${{total()}}</span></div>
+		    <div class="footer-vd3"><button class="button button-energized" ng-click="order()">Place Order</button></div>
+		</div>
+	</ion-footer>
+	
+  
+</ion-view>

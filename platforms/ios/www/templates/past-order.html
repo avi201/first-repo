@@ -1,0 +1,65 @@
+
+<ion-view class="cus-login-bg-color">
+    <div class="bar bar-header cus-header">
+        <button class="button button-icon ion-navicon" menu-toggle="left"></button>
+        <h1 class="title home-title">My Order</h1>
+    </div>
+<ion-content class="cus-login-bg-color has-header">
+    <div class="button-bar cus-header-btn-bar1">
+        <a ui-sref="menu.my-order" menu-close class="button cus-c1">Current Order</a>
+        <a ui-sref="menu.past-order" menu-close class="button btn-active">Past Order</a>
+    </div>
+
+     <div class="myorder-text">Order Details</div>
+
+    <div class="list list-body cus-list-p" ng-repeat="order in orderList">
+        <a class="item">
+            <div class="cus-bold1">Order ID <span>#{{order.id}}</span></div>
+            <div>Order placed:<span>{{order.order_date}}</span></div>
+            <!-- <div>Food : <span>Pizza</span></div> -->
+            <div>Qty. <span>{{order.quantity}}</span></div>
+            <div>Price: <span>${{order.total_price}}</span></div>
+             
+        </a>
+    </div>
+
+<!--     <div class="list pagintn">
+        <div class="item">
+
+            <div class="p-0-1">
+                <div class="p-0-2">Order Placed</div>
+                <div class="p-0-2">Near to you</div>
+                <div class="p-0-2">Delivered</div>
+            </div>
+
+            <div class="pagintion">
+                <div class="line"></div>
+
+                    <ul class="pagn">
+                        <li class="dot drk-grey">1</li>
+                        <li class="dot drk-grey">2</li>
+                        <li class="dot drk-grey">3</li>
+                    </ul>
+
+            </div>
+            <div class="t-0-1">
+                <div>Total Amount  :  <span>${{total()}}</span></div>
+                <div>Payment Mode  : <span>COD</span></div>
+            </div>
+
+            <div class="cus1-mark-order">
+                 <div class="cus-center_div">
+            <ion-checkbox ng-model="isChecked">Mark order as complete</ion-checkbox>
+            </div>
+        </div>
+
+    </div>
+    </div> -->
+    </ion-content>
+
+    <ion-footer>
+          <div class="bar bar-footer">
+           <div>Total Amount  :  <span>${{total()}}</span></div>
+        </div>
+    </ion-footer>
+</ion-view>

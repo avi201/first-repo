@@ -1,0 +1,24 @@
+<ion-view class="cus-login-bg-color">     
+    <div class="bar bar-header cus-header">
+		<button class="button button-icon icon ion-arrow-left-c"  ng-click="goback()"></button>
+		<h1 class="title home-title">Forgot Password</h1>
+    </div>
+
+	 
+<ion-content class="cus-login-bg-color has-header"> 
+    <form  name="myForm" novalidate>
+    <div class="cus-frgt-pass-msg"><span>Please enter your Email-id, You will receive an email shortly.</span></div>
+  
+    <div class="list list-inset cus-frgt-list" >
+       <label class="item item-input">
+       <i class="icon ion-ios-email-outline"></i>
+       <input type="text"  placeholder="Email" ng-model="fgtFrm.email" ng-trim="false" ng-blur="validateEmail()" ng-change="reset()" required>
+       </label>
+            <div>   
+                    <span class="valid" ng-if="isEmailInvalid">Invalid email-id</span>        
+            </div> 
+        <div class="frgt-btn"><button ng-disabled="flag" ng-click="forgot()" class="button button-block button-positive">Submit</button></div>
+    </div>
+    </form>
+        </ion-content>
+</ion-view>

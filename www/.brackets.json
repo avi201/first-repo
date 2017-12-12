@@ -1,0 +1,21 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/Users/AVANISHMISHRA/Downloads/app/www/lib/ionic/js/angular/angular-sanitize.js",
+        "C:/Users/AVANISHMISHRA/Downloads/app/www/lib/ionic/js/angular/angular-sanitize.min.js",
+        "C:/Users/AVANISHMISHRA/Downloads/app/www/lib/ionic/js/angular/angular.js",
+        "C:/Users/AVANISHMISHRA/Downloads/app/www/lib/ngCordova/dist/ng-cordova.min.js",
+        "C:/Users/AVANISHMISHRA/Downloads/app/www/lib/ionic/js/angular-ui/angular-ui-router.min.js",
+        "C:/Users/AVANISHMISHRA/Downloads/app/www/lib/ionic/js/angular-ui/angular-ui-router.js",
+        "C:/Users/AVANISHMISHRA/Downloads/app/www/js/controllers/editprofile.js",
+        "C:/Users/AVANISHMISHRA/Downloads/app/www/lib/ionic/js/angular/angular.min.js",
+        "C:/Users/AVANISHMISHRA/Downloads/app/www/lib/ionic/js/angular/angular-resource.min.js",
+        "C:/Users/AVANISHMISHRA/Downloads/app/www/lib/ionic/js/angular/angular-resource.js",
+        "C:/Users/AVANISHMISHRA/Downloads/Xamarin/Xamarin/www/lib/ngCordova/dist/ng-cordova-mocks.min.js",
+        "C:/Users/AVANISHMISHRA/Downloads/Xamarin/Xamarin/www/lib/ngCordova/dist/ng-cordova.js",
+        "C:/Users/AVANISHMISHRA/Downloads/Xamarin/Xamarin/www/lib/ngCordova/dist/ng-cordova.min.js",
+        "C:/Users/AVANISHMISHRA/Downloads/Xamarin/Xamarin/www/lib/ngCordova/dist/ng-cordova-mocks.js",
+        "C:/Users/AVANISHMISHRA/Downloads/Xamarin/Xamarin/www/js/controllers/signupCtrl.js",
+        "C:/Users/AVANISHMISHRA/Downloads/Xamarin/Xamarin/www/js/ng-cordova.js",
+        "C:/Users/AVANISHMISHRA/Downloads/Xamarin/Xamarin/www/js/controllers/loginCtrl.js"
+    ]
+}

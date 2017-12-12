@@ -1,0 +1,19 @@
+
+<ion-view class="cus-login-bg-color">     
+    <div class="bar bar-header cus-header">
+		<button class="button button-icon icon ion-arrow-left-c" ng-click="goback()"></button>
+		<h1 class="title home-title">Browse Event</h1>
+    </div>
+
+	 
+<ion-content class="cus-login-bg-color has-header">  
+    <div class="list list-inset cus-frgt-list cus-pad-top-browse">
+       <label class="item item-input">
+            <i class="icon ion-ios-location"></i>
+            <input type="text" ng-model="event.location" placeholder="Enter Location">
+       </label>
+    </div>
+			
+    <div class="cus-frgt-btn"><button class="button button-block button-positive" ng-click="search()">Search</button></div>   
+    </ion-content>
+</ion-view>

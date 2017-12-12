@@ -1,0 +1,36 @@
+<ion-view class="cus-login-bg-color">
+    <div class="bar bar-header cus-header">
+		<button class="button button-icon ion-navicon" menu-toggle="left"></button>
+		<h1 class="title home-title">Profile</h1>
+        <button class="button button-icon ion-compose" ui-sref="editProfile"></button>
+	</div>
+<ion-content class="cus-login-bg-color has-header">
+	<div class="cus-user-imgprofile">
+		<img src="{{img}}">
+		<div class="cus-tom-albert"><span>{{profile_data.first_name}} {{profile_data.last_name}}</span></div>
+	</div>
+  
+	<div class="card c1">
+        <div class="item cus-item-text-wrap">
+            <div class="cus-product-row cus-btm-line">
+				<div class="cus-product-name">Name</div> 
+				<div class="cus-colon-text">:</div> 
+				<div class="cus-product-value">{{profile_data.first_name}} {{profile_data.last_name}}</div>
+			</div>
+			  <div class="cus-product-row cus-btm-line">
+				  <div class="cus-product-name">Email</div>
+				  <div class="cus-colon-text">:</div> 
+				  <div class="cus-product-value">{{profile_data.email}}</div>
+			  </div>
+			  <div class="cus-product-row">
+				  <div class="cus-product-name">Mobile Number</div>
+				  <div class="cus-colon-text">:</div> 
+				  <div class="cus-product-value">{{profile_data.mobile_no}}</div>
+			  </div>
+        </div>
+    </div>
+  
+  
+    </ion-content>
+    
+</ion-view>

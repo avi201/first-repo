@@ -1,0 +1,82 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content menu-bg-color>
+<!--
+      <ion-header-bar class="bar-stable" side="left">
+           <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+    </ion-header-bar>
+-->
+<!--
+    <ion-nav-bar class="bar-stable">
+
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>  
+        <ion-nav-buttons side="right">
+        <button class="button-icon icon ion-ios-search-strong"  ng-click="goback()"><img src="img/back_1.png">
+        </button>
+    </ion-nav-buttons>
+
+    </ion-nav-bar>
+-->
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+
+<!--
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Left</h1>
+    </ion-header-bar>
+-->
+
+    <ion-content class="menu-bg-color">
+	
+	<div class="cus-user-imgprofile">
+		<img src="{{img}}" menu-close ui-sref="menu.profile">
+		<div class="cus-tom-albert"><span>{{profile_data.first_name}} {{profile_data.last_name}}</span></div>
+	</div>
+	
+	<div class="list menu-page-list">
+		  <a class="item item-icon-left item-icon-right odd-color" menu-close ui-sref="menu.home">
+			<i class="icon ion-ios-home"></i>
+			Home
+			<i class="icon ion-ios-arrow-forward"></i>
+		  </a>
+
+		  <a class="item item-icon-left item-icon-right even-color" menu-close ui-sref="notification">
+			<i class="icon ion-ios-bell-outline"></i>
+			Notifications
+			<i class="icon ion-ios-arrow-forward"></i>
+		  </a>
+
+		  <a class="item item-icon-left item-icon-right odd-color" menu-close ui-sref="menu.my-order">
+			<i class="icon ion-clipboard"></i>
+			My Orders
+			<i class="icon ion-ios-arrow-forward"></i>
+		  </a>
+		  <a class="item item-icon-left item-icon-right even-color list-img" menu-close ui-sref="menu.privacy-policy">
+		  <i class="icon"><img src="img/order.png"class="pri-pol"></i>
+			Privacy Policy
+			<i class="icon ion-ios-arrow-forward"></i>
+		  </a>
+        <a class="item item-icon-left item-icon-right odd-color list-img" menu-close ui-sref="change-pwd">
+		  <i class="icon"><img src="img/key.png" class="key-img"></i>
+			Change Password
+			<i class="icon ion-ios-arrow-forward"></i>
+		  </a>
+		  <a class="item item-icon-left item-icon-right even-color" menu-close ng-click="logoutPopup()">
+			<i class="icon ion-power"></i>
+			Logout
+			<i class="icon ion-ios-arrow-forward"></i>
+		  </a>
+	</div>	
+
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
